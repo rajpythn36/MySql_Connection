@@ -19,7 +19,7 @@ records1 = cursor.fetchall()
 for fullname, salary in records1:
     print(f"{fullname}, {salary}")
 
-NewQuery = 'SELECT COUNT(salary), CITY FROM cust1 WHERE lname LIKE 'A%S' GROUP BY city'
+NewQuery = 'SELECT COUNT(salary), city FROM cust1 WHERE lname LIKE 'A%S' GROUP BY city'
 cursor.execute(NewQuery)
 records2 = cursor.fetchall()
 for salary, city in records2:
